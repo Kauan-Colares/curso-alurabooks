@@ -1,0 +1,138 @@
+.cabecalho_menu_hamburguer{
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    background-image: url(/assets/Menu.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.cabecalho{
+    background-color: var(--background-2);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+.container{
+    display: flex;
+    align-items: center;
+}
+
+.container_botao:checked ~ .container_rotulo > .cabecalho_menu_hamburguer{
+    background-image: url(/assets/Menu\ Aberto.png);
+}
+
+.container_botao:checked ~ .container_rotulo{
+    background: var(--text-color);
+}
+
+.container_imagem{
+    padding: 0.75em;
+}
+.lista_menu{
+    display: none;
+    position: absolute;
+    top: 100%;
+    width: 60vw;
+}
+.container_botao:checked ~ .lista_menu{
+    display: block;
+}
+
+.lista_menu_titulo,
+.lista_menu_item{
+    padding: 1em;
+    background-color: var(--background-2);
+}
+.lista_menu_titulo{
+    color: var(--title-color);
+    font-weight: 700;
+}
+.lista_menu_links{
+    text-decoration: none;
+    background: var(--text-color);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-transform: uppercase;
+}
+
+.container_titulo, .opcoes, .container_imagem_link, .container_botao{
+    display: none;
+}
+
+@media screen and (min-width: 1024px){
+    .container_titulo,
+    .container_titulo_negrito{
+        font-family: var(--font-secondary);
+        font-size: 30px;
+    }
+
+    .container_titulo{
+        font-weight: 400;
+        display: block;
+    }
+    .container_titulo_negrito{
+        font-weight: 700;
+    }
+
+    .opcoes{
+        display: flex;
+    }
+
+    .opcoes_item{
+        padding: 0 1em;
+    }
+
+    .opcoes_item_link{
+        text-decoration: none;
+        color: var(--font-color);
+    }
+
+    .container_imagem_sumiu, .cabecalho_menu_hamburguer, .opcoes_botao{
+        display: none;
+    }
+
+    .opcoes_botao:checked ~ .lista_menu{
+        display: block;
+        width: auto;
+    }
+    
+    .opcoes_botao:checked ~ .opcoes_rotulo > .opcoes_item{
+        background: var(--text-color);
+        color: var(--background-2);
+    }
+
+    .opcoes_item{
+        padding: 2em 1em;
+    }
+
+    .lista_menu_item:hover{
+        background: var(--text-color);
+    }
+    .lista_menu_item:hover > .lista_menu_links{
+        -webkit-text-fill-color: var(--background-2);
+        text-decoration: none;
+    }
+}
+
+@media screen and (min-width: 1728px){
+    .cabecalho{
+        padding: 0 4em 0 4em;
+    }
+    .container_imagem_link{
+        display: block;
+    }
+    .container_links{
+        display: flex;
+        align-items: center;
+        padding-left: 2em;
+        text-decoration: none;
+        color: var(--blue);
+    }
+
+    .opcoes{
+        margin-right: auto;
+        padding-left: 2em;
+    }
+}

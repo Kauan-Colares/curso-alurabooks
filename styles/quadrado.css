@@ -1,0 +1,99 @@
+.quadrado-sugestao{
+    display: flex;
+    background-color: var(--background-2);
+    justify-content: space-between;
+    margin: 1em;
+    gap: 0.5em;
+    padding: 1em;
+    border: 1px solid var(--background-2);
+    border-radius: 10px;
+    box-shadow: 0px 4px 4px rgba( 0, 0, 0, 0.25);
+}
+.quadrado-texto{
+    display: flex;
+    justify-content: start;
+    flex-direction: column;
+    gap: 0.5em;
+}
+.quadrado-imagem{
+    display: flex;
+    justify-content: end;
+    flex-direction: column;
+    gap: .5em;
+    align-items: center;
+}
+.quadrado-titulo-amarelo{
+    color: var(--title-color);
+    font-size: 16px;
+    font-weight: 700;
+}
+.quadrado-titulo-azul{
+    color: var(--blue);
+    font-size: 20px;
+    font-weight: 700;
+}
+.quadrado-paragrafo{
+    color: var(--font-color);
+    font-size: 16px;
+    font-weight: 400;
+}
+.quadrado-texto-botoes{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: start;
+    gap: .5em;
+    padding: 5%;
+}
+.quadrado-botao{
+    border: 1px solid var(--title-color);
+    padding: 1em 2em;
+    background-color: var(--title-color);
+    color: var(--background-2);
+    font-size: 16px;
+    font-weight: 700;
+    text-decoration: none;
+    margin-top: 1em;
+    border-radius: 2px;
+}
+.quadrado-estrelinhas{
+    width: 60%;
+}
+
+@media screen and (min-width: 1024px){
+    .quadrado-sugestao{
+        width: 40%;
+        align-self: center;
+        margin: 2em auto
+    }
+    .quadrado-estrelinhas{
+        width: 40%;
+    }
+
+    .quadrado-botao:hover{
+        background-color: var(--blue);
+        color: var(--title-color);
+        border-color: var(--blue);
+    }   
+}
+
+@media screen and (min-width: 1728px) {
+    .quadrado-sugestao{
+        width: 40%;
+    }
+    .quadrado-titulo-amarelo{
+        font-size: 32px;
+        font-weight: 700;
+    }
+    .quadrado-titulo-azul{
+        font-size: 18px;
+        font-weight: 700;
+    }
+    .quadrado-estrelinhas{
+        width: 25%;
+    }
+    .quadrado-paragrafo{
+        font-size: 16px;
+
+    }
+}

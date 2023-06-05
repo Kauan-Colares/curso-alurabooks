@@ -1,0 +1,111 @@
+@import url("/styles/header.css");
+@import url("/styles/banner.css");
+@import url("/styles/carrossel.css");
+@import url("/styles/quadrado.css");
+@import url("/styles/topicos.css");
+@import url("/styles/contatos.css");
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;1,700&display=swap');@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;700&display=swap');
+:root{
+    --background-color: #E5E5E5;
+    --font-color: #000000;
+    --text-active: #086fbe;
+    --text-color: linear-gradient(97.54deg, #002F52 35.49%, #326589 165.37%);
+    --title-color: #EB9B00;
+    --background-2: #ffffff;
+    --text-font:'Poppins', sans-serif;
+    --blue: #002F52;
+    --font-secondary:'Josefin Sans', sans-serif;
+    --grey:#474646;
+    --light-grey: #858585;
+}
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-color: var(--background-color);
+    color: var(--font-color);
+    font-family: var(--text-font);
+    font-size: 16px;
+    font-weight: 400;
+}
+.rodape{
+    padding: 24px;
+    border-top: 1px solid var(--font-color);
+    background-color: var(--background-2);
+}
+.rodape-titulo-link{
+    color: var(--font-color);
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.rodape-lista{
+    display: none;
+}
+
+@media screen and (min-width: 1024px){
+    .rodape_gigante{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        margin-top: 1.5em;
+    }
+
+    .rodape-titulo-link{
+        font-size: 24px;
+        font-weight: 400;
+    }
+
+    .rodape_lista_titulo{
+        font-size: 14px;
+        font-weight: 400;
+        color: var(--light-grey);
+    }
+    .rodape-lista{
+        display: flex;
+        flex-direction: column;
+        gap: 25px;
+    }
+
+
+    .item_rodape_lista{
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .rodape_lista_itens{
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+    }
+
+    .rodape-link{
+        text-decoration: none;
+        color: var(--grey);
+    }
+
+    .rodape-link:hover{
+        color: var(--text-active);
+    }
+}
+
+@media screen and (min-width: 1728px) {
+    .carrossel_quadrado{
+        display: flex;
+        padding: 0 10vw 3em 10vw;
+        flex-direction: row;
+    }
+
+    .rodape{
+        padding: 2.5% 5%;
+    }
+
+    .rodape-lista{
+        border-left: 1px solid var(--light-grey);
+        padding-left: 1em;
+    }
+}
